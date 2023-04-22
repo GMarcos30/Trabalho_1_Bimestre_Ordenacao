@@ -2,6 +2,7 @@ package com.mycompany.ordenacao;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Menu {
     public EntradaDeDados entradaDeDados;
@@ -31,19 +32,31 @@ public class Menu {
 
             switch (opcao) {
                 case 1:
+                    long inicio = System.currentTimeMillis();
                     int[] vetorOrdenadoInsercao = OrdenaçãoInsercao.ordenarPorInsercao(vetor);
+                    long fim = System.currentTimeMillis();
                     System.out.println("Vetor ordenado por insercao:");
                     System.out.println(Arrays.toString(vetorOrdenadoInsercao));
+                    System.out.println("Tempo de execução: " + TimeUnit.MILLISECONDS.toSeconds(fim - inicio) +
+                            " segundos");
                     break;
                 case 2:
+                    inicio = System.currentTimeMillis();
                     int[] vetorOrdenadoSelecao = OrdenacaoSelecao.ordenarPorSelecao(vetor);
+                    fim = System.currentTimeMillis();
                     System.out.println("Vetor ordenado por selecao:");
                     System.out.println(Arrays.toString(vetorOrdenadoSelecao));
+                    System.out.println("Tempo de execução: " + TimeUnit.MILLISECONDS.toSeconds(fim - inicio) +
+                            " segundos");
                     break;
                 case 3:
+                    inicio = System.currentTimeMillis();
                     int[] vetorOrdenadoBolha = OrdenacaoBolha.ordenarPorBolha(vetor);
+                    fim = System.currentTimeMillis();
                     System.out.println("Vetor ordenado por bolha:");
                     System.out.println(Arrays.toString(vetorOrdenadoBolha));
+                    System.out.println("Tempo de execução: " + TimeUnit.MILLISECONDS.toSeconds(fim - inicio) +
+                            " segundos");
                     break;
                 case 0:
                     System.out.println("Saindo...");

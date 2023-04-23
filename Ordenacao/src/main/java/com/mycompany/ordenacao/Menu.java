@@ -27,6 +27,7 @@ public class Menu {
 
             Scanner scanner = new Scanner(System.in);
             opcao = scanner.nextInt();
+            scanner.nextLine();
 
             long tempoInicial = System.currentTimeMillis();
 
@@ -60,6 +61,7 @@ public class Menu {
                     break;
                 case 0:
                     System.out.println("Saindo...");
+                    opcao = 0;
                     break;
                 default:
                     System.out.println("Opcao invalida. Tente novamente.");

@@ -5,10 +5,8 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        EntradaDeDados entraDados = new EntradaDeDados();
-        entraDados.obterVetor();
-
         Menu nvMenu = new Menu();
         nvMenu.exibirMenu();
+
     }
 }
